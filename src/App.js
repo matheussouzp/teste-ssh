@@ -4,10 +4,12 @@ import About from './pages/about'
 import Plans from './pages/plans'
 import Details from './pages/details'
 import Footer from './components/Footer/index'
+import Title from './components/Title/index'
 
 export default function App() {
     return (
         <Router>
+            
             <div class="container">
             <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
                 <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
@@ -26,13 +28,14 @@ export default function App() {
                     <button type="button" class="btn btn-primary">Cadastrar</button>
                 </div>
             </header>
+            
         </div>
             
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/about/:name' element={<About />} />
                 <Route path='/plans' element={<Plans />} />
-                <Route path='/details/:filme' element={<Details />} />
+                <Route path='details/:filme' element={<Details />} />
                 <Route path='*' element={<h1> Pagina não encontrada</h1> } />
             </Routes >
             <Footer />
